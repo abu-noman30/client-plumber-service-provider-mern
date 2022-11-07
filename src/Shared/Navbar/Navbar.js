@@ -5,26 +5,31 @@ const Navbar = () => {
 	const [state, setState] = useState(false);
 	const navigation = [
 		{ title: 'Home', path: '/home' },
-		{ title: 'Careers', path: '/' },
-		{ title: 'Guides', path: '/' },
-		{ title: 'Partners', path: '/' }
+		{ title: 'My reviews', path: '/my-reviews' },
+		{ title: 'Add Service', path: '/add-services' },
+		{ title: 'Blogs', path: 'blogs' }
 	];
 
 	return (
 		<>
 			{/* Navbar Container */}
 
-			<div className='navbar-container'>
+			<div className='navbar-container mb-10'>
 				<nav className='bg-white w-full border-b md:border-0 md:static'>
 					<div className='items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8'>
 						<div className='flex items-center justify-between py-3 md:py-5 md:block'>
 							<NavLink to='/'>
-								<img
-									src='https://www.floatui.com/logo.svg'
-									width={120}
-									height={50}
-									alt='Float UI logo'
-								/>
+								<div className='flex items-center'>
+									<img
+										src='Images/logo.png'
+										width={50}
+										height={50}
+										alt='Float UI logo'
+									/>
+									<h1 className='text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-sky-400'>
+										plumBoy
+									</h1>
+								</div>
 							</NavLink>
 							<div className='md:hidden'>
 								<button
@@ -75,19 +80,25 @@ const Navbar = () => {
 											key={idx}
 											className='text-gray-600 hover:text-indigo-600'
 										>
-											<a href={item.path}>{item.title}</a>
+											<NavLink to={item.path}>{item.title}</NavLink>
 										</li>
 									);
 								})}
+								<NavLink to='/login'>
+									<div className='inline-block md:hidden w-full mt-5'>
+										<button className='py-3 px-4 text-white bg-indigo-600 hover:bg-indigo-700 rounded-md shadow w-full'>
+											Login
+										</button>
+									</div>
+								</NavLink>
 							</ul>
 						</div>
 						<div className='hidden md:inline-block'>
-							<a
-								href='/'
-								className='py-3 px-4 text-white bg-indigo-600 hover:bg-indigo-700 rounded-md shadow'
-							>
-								Get Started
-							</a>
+							<NavLink to='/login'>
+								<button className='py-3 px-4 text-white bg-indigo-600 hover:bg-indigo-700 rounded-md shadow'>
+									Login
+								</button>
+							</NavLink>
 						</div>
 					</div>
 				</nav>

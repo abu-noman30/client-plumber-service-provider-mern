@@ -5,32 +5,33 @@ const Header = () => {
 		<>
 			{/* Header Container */}
 			<div className='header-container'>
-				<div className='relative w-full h-[40rem] bg-gray-200 overflow-hidden'>
+				<div className='relative w-full h-[40rem] bg-gray-200 overflow-hidden rounded-lg shadow-lg shadow-gray-400 '>
 					{/* :HERO BACKGROUND */}
-					<div className='absolute w-full h-full bg-black'>
+					<div className='absolute w-full h-full bg-black '>
 						<img
-							src='https://fancytailwind.com/static/d38369764db9945c335175de244c268f/2e8d7/portrait1.webp'
+							src='https://img.freepik.com/premium-photo/male-plumber-uniform-changes-faucet-kitchen-handyman-with-toolbag-repair-sink-sanitary-equipment-service-home_266732-4494.jpg?w=826'
 							alt=''
-							className='absolute -right-28 w-full h-full object-cover'
+							className='absolute -right-28 w-full h-full object-fill hover:object-scale-down'
 						/>
 					</div>
 
 					{/* :HERO CONTAINER */}
 					<div className='relative py-10 xl:py-20 px-5 w-full sm:w-2/3 h-full flex flex-col justify-center items-center bg-white bg-opacity-80'>
 						{/* ::Top Title */}
-						<h2 className='mt-14 text-center text-base sm:text-lg text-gray-800 font-newsreader font-medium uppercase tracking-extra'>
-							<span className='text-3xl'>T</span>his is how{' '}
-							<span className='text-3xl'>F</span>ancy{' '}
-							<span className='text-3xl'>T</span>ailwind
+						<h2 className='mb-5 text-center text-2xl sm:text-lg  text-gray-800 font-newsreader font-medium uppercase tracking-extra'>
+							<span className='text-3xl'>P</span>rofessional{' '}
+							<span className='text-3xl'>P</span>lumbing{' '}
+							<span className='text-3xl'>S</span>ervice{' '}
+							<span className='text-3xl'>P</span>povider
 						</h2>
 
 						{/* ::Title => W O R K */}
 						<div
-							className='pb-7 sm:pb-14 xl:pb-20 max-w-sm sm:max-w-xl xl:max-w-2xl w-full flex flex-col items-center overflow-hidden'
+							className='mb-5 pb-7 sm:pb-14 xl:pb-20 max-w-sm sm:max-w-xl xl:max-w-2xl w-full flex flex-col items-center overflow-hidden'
 							style={{ textShadow: '2px 2px 5px rgba(86,90,88,0.85)' }}
 						>
 							{/* :::W O */}
-							<span className='relative w-full text-7xl sm:text-8xl md:text-9xl xl:text-10xl font-semibold flex justify-around'>
+							<span className='relative w-full text-5xl md:text-7xl xl:text-8xl font-semibold flex justify-around'>
 								<span className='z-10'>W</span>
 								<span>O</span>
 								{/* Line through */}
@@ -41,7 +42,7 @@ const Header = () => {
 							</span>
 
 							{/* :::R K */}
-							<span className='relative w-full text-7xl sm:text-8xl md:text-9xl xl:text-10xl font-semibold flex justify-around'>
+							<span className='relative w-full text-5xl md:text-7xl xl:text-8xl font-semibold flex justify-around'>
 								<span>R</span>
 								<span className='z-10'>K</span>
 								{/* Line through */}
@@ -53,18 +54,19 @@ const Header = () => {
 						</div>
 
 						{/* ::Bottom title and text */}
-						<div className='w-3/4 flex flex-col md:flex-row'>
+						<div className='w-3/4 flex flex-col md:flex-row -mt-8'>
 							{/* :::Title */}
 							<h3 className='sm:px-5 text-center md:text-right text-lg text-gray-800 font-newsreader font-normal uppercase tracking-widest'>
-								<span className='text-3xl'>O</span>ur{' '}
+								<span className='text-3xl'>M</span>y{' '}
 								<span className='text-3xl'>A</span>pproach
 							</h3>
 							{/* :::Text */}
 							<p className='sm:px-5 text-center md:text-left font-light leading-relaxed'>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-								sapiente tempore placeat. Maxime officia itaque ipsa similique
-								exercitationem veniam. Provident quibusdam recusandae accusamus
-								temporibus dolorem reiciendis optio.
+								I am a professional plumber with over 10 years of experience. I
+								absolutely love my job and I am absolutely passionate about it.
+								I am a very hard working person and I am always willing to go
+								the extra mile to make sure that my customers are satisfied with
+								my work.
 							</p>
 						</div>
 					</div>

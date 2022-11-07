@@ -15,7 +15,7 @@ const Navbar = () => {
 			{/* Navbar Container */}
 
 			<div className='navbar-container mb-10'>
-				<nav className='bg-white w-full border-b md:border-0 md:static'>
+				<nav className='bg-gray-300 w-full border-b md:border-0 md:static bg-gradient-to-l from-gray-400 via-gray-300 to-gray-200 shadow-xl rounded-lg'>
 					<div className='items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8'>
 						<div className='flex items-center justify-between py-3 md:py-5 md:block'>
 							<NavLink to='/'>
@@ -80,7 +80,30 @@ const Navbar = () => {
 											key={idx}
 											className='text-gray-600 hover:text-indigo-600'
 										>
-											<NavLink to={item.path}>{item.title}</NavLink>
+											<NavLink to={item.path}>
+												{/* :SMALL BUTTON 1 */}
+												<button className='group relative inline-flex items-center px-2.5 py-1.5 rounded shadow-lg outline-none bg-gray-300 text-sm text-gray-700 font-medium transition-all duration-200 ease-out hover:text-gray-600 hover:bg-transparent hover:shadow-none active:top-0.5 focus:outline-none'>
+													{/* span::before */}
+													<span
+														className='absolute h-0 w-0.5 right-0 top-0 bg-gray-500  transition-all duration-500 ease-out group-hover:h-full'
+														aria-hidden='true'
+													/>
+													<span
+														className='absolute left-0 bottom-0 bg-gray-500  transition-all duration-500 ease-out w-0.5 h-0 group-hover:h-full'
+														aria-hidden='true'
+													/>
+													{item.title}
+													{/* span::after */}
+													<span
+														className='absolute left-0 bottom-0 bg-gray-500 transition-all duration-500 ease-out w-0 h-0.5 group-hover:w-full'
+														aria-hidden='true'
+													/>
+													<span
+														className='absolute w-0 h-0.5 right-0 top-0 bg-gray-500  transition-all duration-500 ease-out group-hover:w-full'
+														aria-hidden='true'
+													/>
+												</button>
+											</NavLink>
 										</li>
 									);
 								})}
@@ -95,8 +118,12 @@ const Navbar = () => {
 						</div>
 						<div className='hidden md:inline-block'>
 							<NavLink to='/login'>
-								<button className='py-3 px-4 text-white bg-indigo-600 hover:bg-indigo-700 rounded-md shadow'>
-									Login
+								<button className='m-5 group relative inline-flex items-center px-5 py-2.5 rounded shadow-lg outline-none text-base text-white font-medium overflow-hidden transition-all duration-200 ease-in transform hover:scale-110 hover:bg-transparent hover:shadow-none active:top-0.5 focus:outline-none'>
+									Login{/* button::after */}
+									<span
+										className='absolute -z-1 z-[-1] top-0 left-0 w-full h-full bg-blue-700  transition-all duration-200 ease-in transform group-hover:scale-150 group-hover:rotate-180'
+										aria-hidden='true'
+									/>
 								</button>
 							</NavLink>
 						</div>

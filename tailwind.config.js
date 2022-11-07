@@ -1,5 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+	extend: {
+		transitionTimingFunction: {
+			bounce: 'cubic-bezier(0.68, -0.55, 0.265, 1.55)'
+		}
+	},
 	content: [
 		'./src/**/*.{js,jsx,ts,tsx}',
 		'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}'

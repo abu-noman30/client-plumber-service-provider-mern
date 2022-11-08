@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../../Layouts/Header/Header';
 import CallToAction from '../../Shared/CallToAction/CallToAction';
 import Contact from '../../Shared/Contact/Contact';
+import Services from '../../Shared/Services/Services';
 
 const Home = () => {
 	return (
@@ -11,6 +12,10 @@ const Home = () => {
 				<Header />
 			</div>
 			{/* Services Section */}
+			<div className='services-section'>
+				<Services />
+			</div>
+			<div className='services-section'></div>
 			{/* Call To Action Section */}
 			<div className='call-to-action-section'>
 				<CallToAction />

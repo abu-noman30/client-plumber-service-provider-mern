@@ -1,0 +1,134 @@
+[
+  {
+    "id": "1",
+    "name": "Plumbing",
+    "img": "https://i.ibb.co/88MFbyX/plumber-man-fixing-kitchen-sink-53876-27.webp",
+    "description": "All your Plumbing and Sanitary-related problems I will be taken care of. I am experts in fitting, installations, and drainage related issues. I will Study and analyze blueprints and floor plans to understand the plumbing system and water supply system layout.Will Navigate the assembly and installation of pipes and tubes without interfering with existing infrastructure,Measure, cut and bend pipe materials to the correct size and shape. ",
+    "features": [
+      "7 Days Service Warranty",
+      "Doorstep service",
+      "Safety Assurance",
+      "24/7 Service"
+    ],
+    "pricing": [
+      "Only Service Charge",
+      "Visiting Charges is BDT 100 if no service is availed",
+      "Excludes all components and parts (if used)",
+      "Excludes Transportation cost (if applied)"
+    ],
+    "payment": "Cash on Delivery.",
+    "Warranty": "7 Days Service Warranty",
+    "rating": "5.0",
+    "totalPrice": "100"
+  },
+  {
+    "id": "2",
+    "name": "Installation",
+    "img": "https://i.ibb.co/phRWtXm/asian-plumber-blue-overalls-clearing-blockage-drain-1098-17773.webp",
+    "description": "All your Installation and Sanitary-related problems I will be taken care of. I am experts in fitting, installations, and drainage related issues. I will Study and analyze blueprints and floor plans to understand the plumbing system and water supply system layout.Will Navigate the assembly and installation of pipes and tubes without interfering with existing infrastructure,Measure, cut and bend pipe materials to the correct size and shape. Will Install and repair water supply lines and drainage systems. ",
+    "features": [
+      "7 Days Service Warranty",
+      "Doorstep service",
+      "Safety Assurance",
+      "24/7 Service"
+    ],
+    "pricing": [
+      "Only Service Charge",
+      "Visiting Charges is BDT 100 if no service is availed",
+      "Excludes all components and parts (if used)",
+      "Excludes Transportation cost (if applied)"
+    ],
+    "payment": "Cash on Delivery.",
+    "Warranty": "7 Days Service Warranty",
+    "rating": "4.9",
+    "totalPrice": "80"
+  },
+  {
+    "id": "3",
+    "name": "Repair",
+    "img": "https://i.ibb.co/CzFgLvt/cheerful-asian-plumber-sitting-floor-repairing-kitchen-sink-1098-17780.webp",
+    "description": "All your Repair and Sanitary-related problems I will be taken care of. I am experts in fitting, installations, and drainage related issues. I will Study and analyze blueprints and floor plans to understand the plumbing system and water supply system layout.Will Navigate the assembly and installation of pipes and tubes without interfering with existing infrastructure,Measure, cut and bend pipe materials to the correct size and shape.Assemble valves, fittings, tubes and water system appliances to create a functional plumbing system.  ",
+    "features": [
+      "7 Days Service Warranty",
+      "Doorstep service",
+      "Safety Assurance",
+      "24/7 Service"
+    ],
+    "pricing": [
+      "Only Service Charge",
+      "Visiting Charges is BDT 100 if no service is availed",
+      "Excludes all components and parts (if used)",
+      "Excludes Transportation cost (if applied)"
+    ],
+    "payment": "Cash on Delivery.",
+    "Warranty": "7 Days Service Warranty",
+    "rating": "4.9",
+    "totalPrice": "50"
+  },
+  {
+    "id": "4",
+    "name": "Emergency",
+    "img": "https://i.ibb.co/p4tcJyP/top-view-plumber-checking-kitchen-fixtures-1098-17864.webp",
+    "description": "All your Emergency and Sanitary-related problems I will be taken care of. I am experts in fitting, installations, and drainage related issues. I will Study and analyze blueprints and floor plans to understand the plumbing system and water supply system layout.Will Navigate the assembly and installation of pipes and tubes without interfering with existing infrastructure,Measure, cut and bend pipe materials to the correct size and shape.Assemble valves, fittings, tubes and water system appliances to create a functional plumbing system. ",
+    "features": [
+      "7 Days Service Warranty",
+      "Doorstep service",
+      "Safety Assurance",
+      "24/7 Service"
+    ],
+    "pricing": [
+      "Only Service Charge",
+      "Visiting Charges is BDT 100 if no service is availed",
+      "Excludes all components and parts (if used)",
+      "Excludes Transportation cost (if applied)"
+    ],
+    "payment": "Cash on Delivery.",
+    "Warranty": "7 Days Service Warranty",
+    "rating": "4.6",
+    "totalPrice": "30"
+  },
+  {
+    "id": "5",
+    "name": "Residential",
+    "img": "https://i.ibb.co/tpfdPZg/asian-male-plumber-uniform-talking-senior-female-homeowner-kitchen-1098-17782.webp",
+    "description": "All your Residential and Sanitary-related problems I will be taken care of. I am experts in fitting, installations, and drainage related issues. I will Study and analyze blueprints and floor plans to understand the plumbing system and water supply system layout.Will Navigate the assembly and installation of pipes and tubes without interfering with existing infrastructure,Measure, cut and bend pipe materials to the correct size and shape.Assemble valves, fittings, tubes and water system appliances to create a functional plumbing system. ",
+    "features": [
+      "7 Days Service Warranty",
+      "Doorstep service",
+      "Safety Assurance",
+      "24/7 Service"
+    ],
+    "pricing": [
+      "Only Service Charge",
+      "Visiting Charges is BDT 100 if no service is availed",
+      "Excludes all components and parts (if used)",
+      "Excludes Transportation cost (if applied)"
+    ],
+    "payment": "Cash on Delivery.",
+    "Warranty": "7 Days Service Warranty",
+    "rating": "4.5",
+    "totalPrice": "20"
+  },
+  {
+    "id": "6",
+    "name": "Commercial",
+    "img": "https://i.ibb.co/ryqhnwN/cheerful-asian-plumber-standing-near-kitchen-sink-showing-thumb-up-1098-17826.webp",
+    "description": "All your Commercial and Sanitary-related problems I will be taken care of. I am experts in fitting, installations, and drainage related issues. I will Study and analyze blueprints and floor plans to understand the plumbing system and water supply system layout.Will Navigate the assembly and installation of pipes and tubes without interfering with existing infrastructure,Measure, cut and bend pipe materials to the correct size and shape.Assemble valves, fittings, tubes and water system appliances to create a functional plumbing system. ",
+    "features": [
+      "7 Days Service Warranty",
+      "Doorstep service",
+      "Safety Assurance",
+      "24/7 Service"
+    ],
+    "pricing": [
+      "Only Service Charge",
+      "Visiting Charges is BDT 100 if no service is availed",
+      "Excludes all components and parts (if used)",
+      "Excludes Transportation cost (if applied)"
+    ],
+    "payment": "Cash on Delivery.",
+    "Warranty": "7 Days Service Warranty",
+    "rating": "4.8",
+    "totalPrice": "10"
+  }
+]

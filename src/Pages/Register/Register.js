@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import * as FAIcons from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FbaseAuthContext } from '../../Context/AuthContextAPI';
 
 const Register = () => {
@@ -207,12 +207,11 @@ const Register = () => {
 														Register
 													</button>
 												</div>
-												<p className='px-6 text-sm text-center'>
-													Allready Have an account?
-													<a rel='noopener noreferrer' href='/login' className='hover:underline'>
-														Login
-													</a>
-												</p>
+												<Link rel='noopener noreferrer' to='/login' className='hover:underline'>
+													<p className='px-6 text-sm text-center mt-5'>
+														Allready Have an account? <span className='text-blue-600'>Login</span>
+													</p>
+												</Link>
 											</div>
 										</form>
 									</div>

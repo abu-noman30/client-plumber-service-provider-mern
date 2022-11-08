@@ -12,6 +12,7 @@ const Navbar = () => {
 			{ title: 'Home', path: '/home' },
 			{ title: 'My reviews', path: '/my-reviews' },
 			{ title: 'Add Service', path: '/add-services' },
+			{ title: 'Add Reviews', path: '/add-reviews' },
 			{ title: 'Blogs', path: 'blogs' }
 		];
 		navigation = [...loginNavigation];

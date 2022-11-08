@@ -1,5 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
 import Root from '../Layouts/Root/Root';
+import AddReviews from '../Pages/AddReviews/AddReviews';
 import AllServices from '../Pages/AllServices/AllServices';
 import Error from '../Pages/Error/Error';
 import Home from '../Pages/Home/Home';
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
 				loader: async ({ params }) => {
 					return await fetch(`http://localhost:5000/services/${params.id}`);
 				}
+			},
+			{
+				path: 'add-reviews',
+				element: <AddReviews />
 			},
 			{
 				path: 'login',

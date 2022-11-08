@@ -19,17 +19,11 @@ const Header = () => {
 					<div className='relative py-10 xl:py-20 px-5 w-full sm:w-2/3 h-full flex flex-col justify-center items-center bg-white bg-opacity-80'>
 						{/* ::Top Title */}
 						<h2 className='mb-5 text-center text-2xl sm:text-lg  text-gray-800 font-newsreader font-medium uppercase tracking-extra'>
-							<span className='text-3xl'>P</span>rofessional{' '}
-							<span className='text-3xl'>P</span>lumbing{' '}
-							<span className='text-3xl'>S</span>ervice{' '}
-							<span className='text-3xl'>P</span>povider
+							<span className='text-3xl'>P</span>rofessional <span className='text-3xl'>P</span>lumbing <span className='text-3xl'>S</span>ervice <span className='text-3xl'>P</span>povider
 						</h2>
 
 						{/* ::Title => W O R K */}
-						<div
-							className='mb-5 pb-7 sm:pb-14 xl:pb-20 max-w-sm sm:max-w-xl xl:max-w-2xl w-full flex flex-col items-center overflow-hidden'
-							style={{ textShadow: '2px 2px 5px rgba(86,90,88,0.85)' }}
-						>
+						<div className='mb-5 pb-7 sm:pb-14 xl:pb-20 max-w-sm sm:max-w-xl xl:max-w-2xl w-full flex flex-col items-center overflow-hidden' style={{ textShadow: '2px 2px 5px rgba(86,90,88,0.85)' }}>
 							{/* :::W O */}
 							<span className='relative w-full text-5xl md:text-7xl xl:text-8xl font-semibold flex justify-around'>
 								<span className='z-10'>W</span>
@@ -57,16 +51,12 @@ const Header = () => {
 						<div className='w-3/4 flex flex-col md:flex-row -mt-8'>
 							{/* :::Title */}
 							<h3 className='sm:px-5 text-center md:text-right text-lg text-gray-800 font-newsreader font-normal uppercase tracking-widest'>
-								<span className='text-3xl'>M</span>y{' '}
-								<span className='text-3xl'>A</span>pproach
+								<span className='text-3xl'>M</span>y <span className='text-3xl'>A</span>pproach
 							</h3>
 							{/* :::Text */}
 							<p className='sm:px-5 text-center md:text-left font-light leading-relaxed'>
-								I am a professional plumber with over 10 years of experience. I
-								absolutely love my job and I am absolutely passionate about it.
-								I am a very hard working person and I am always willing to go
-								the extra mile to make sure that my customers are satisfied with
-								my work.
+								I am a professional plumber with over 10 years of experience. I absolutely love my job and I am absolutely passionate about it. I am a very hard working person and I am always willing to go the extra mile
+								to make sure that my customers are satisfied with my work.
 							</p>
 						</div>
 					</div>

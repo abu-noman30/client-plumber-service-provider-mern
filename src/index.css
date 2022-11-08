@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -21,4 +21,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
+/* @layer utilities {
+  .transform-bgr1-s1 {
+    transform: rotatez(45deg) translate(6px, 1px);
+  }
+  .transform-bgr1-s2 {
+    transform: rotatez(-45deg);
+  }
+  .transform-bgr1-s3 {
+    width: 50%;
+    transform: translate(2px, -14px) rotatez(45deg);
+  }
+} */

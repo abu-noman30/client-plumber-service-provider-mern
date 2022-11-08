@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import SingleServices from '../../Components/SingleServices/SingleServices';
 
 const Services = () => {
@@ -30,17 +31,23 @@ const Services = () => {
 				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-10/12 m-auto rounded-2xl'>
 					{/* Card container */}
 					{homeServices.map((service) => (
-						<SingleServices service={service} />
+						<SingleServices key={service._id} service={service} />
 					))}
 				</div>
 				<div className=' flex items-center justify-center my-5'>
 					{/* :BIG BUTTON 1 */}
-					<button
-						type='button'
-						className='relative inline-flex items-center px-8 py-3 border border-transparent bg-gray-700 text-lg text-white font-medium rounded'
-					>
-						See All
-					</button>
+					<Link to='/services'>
+						{/* :MEDIUM BUTTON 33 */}
+						<button className='group relative px-7 py-3 inline-flex justify-center items-center border-2 rounded-md bg-gradient-to-br from-blue-900 to-purple-500 tracking-wide text-base text-white font-medium antialiased overflow-hidden active:top-0.5 focus:outline-none'>
+							{/* button::before */}
+							<span className='absolute top-1/2 left-0 w-full opacity-0 transition-all duration-300 ease-in-out transform -translate-x-full -translate-y-1/2 group-hover:opacity-100 group-hover:translate-x-0'>
+								Click me!
+							</span>
+							<span className='transition-all duration-300 ease-in-out transform group-hover:opacity-0 group-hover:translate-x-full group-hover:translate-y-0'>
+								See All
+							</span>
+						</button>
+					</Link>
 				</div>
 			</div>
 		</>

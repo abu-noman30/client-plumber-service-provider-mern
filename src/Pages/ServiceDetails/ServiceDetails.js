@@ -3,8 +3,7 @@ import { useLoaderData } from 'react-router-dom';
 
 const ServiceDetails = () => {
 	const loaderData = useLoaderData();
-	const { name, description, img, features, pricing, payment, Warranty } =
-		loaderData;
+	const { name, description, img, features, pricing, payment, Warranty } = loaderData;
 	console.log(loaderData);
 	return (
 		<>
@@ -14,19 +13,13 @@ const ServiceDetails = () => {
 					<div className='mx-auto max-w-2xl lg:max-w-none grid grid-cols-2 gap-x-5'>
 						{/* :Services PICTURE */}
 						<div className='order-first lg:order-last col-span-full lg:col-span-1 relative rounded-sm border-2 border-gray-200'>
-							<img
-								src={img}
-								alt='Service'
-								className='object-contain w-full h-80 lg:h-full'
-							/>
+							<img src={img} alt='Service' className='object-contain w-full h-80 lg:h-full' />
 						</div>
 
 						{/* :Services DETAILS */}
 						<div className='order-last lg:order-first col-span-full lg:col-span-1 lg:max-w-xl flex flex-col items-start'>
 							{/* ::Name */}
-							<h1 className='text-3xl sm:text-4xl text-gray-700 font-extrabold tracking-wide'>
-								{name}
-							</h1>
+							<h1 className='text-3xl sm:text-4xl text-gray-700 font-extrabold tracking-wide'>{name}</h1>
 							{/* ::Price & Rating */}
 							<div className='mt-5 flex items-center'>
 								{/* :::Price */}
@@ -38,9 +31,7 @@ const ServiceDetails = () => {
 								</div>
 							</div>
 							{/* ::Description */}
-							<p className='mt-10 text-sm text-gray-500 font-medium'>
-								{description}
-							</p>
+							<p className='mt-10 text-sm text-gray-500 font-medium'>{description}</p>
 							{/* Service Features: */}
 
 							{features.map((feature) => (

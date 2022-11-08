@@ -1,9 +1,14 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FbaseAuthContext } from '../../Context/AuthContextAPI';
 const Login = () => {
-	const { methodSignIn, methodGoogleSignIn } = useContext(FbaseAuthContext);
+	const { methodSignIn, methodGoogleSignIn, methodSignOut } = useContext(FbaseAuthContext);
 	const [error, setError] = useState('');
+	const navigate = useNavigate();
+	const location = useLocation();
+
+	let from = location.state?.from?.pathname || '/';
+	console.log(from);
 
 	const handlerOnSubmit = (e) => {
 		e.preventDefault();
@@ -21,9 +26,20 @@ const Login = () => {
 				const user = userCredential.user;
 				form.reset();
 				setError('');
-
 				console.log(user);
 				// ...
+				if (user && user.uid) {
+					if (from === '/' || from === '/home') {
+						// toast.success('Login Successful');
+						navigate('/home');
+					} else {
+						// toast.success('Login Successful');
+						navigate(from, { replace: true });
+					}
+				} else {
+					// toast.error('Please verify your Email!');
+					handlerOnLogout();
+				}
 			})
 
 			.catch((error) => {
@@ -43,6 +59,18 @@ const Login = () => {
 				const user = result.user;
 				console.log(user);
 				// ...
+				if (user && user.uid) {
+					if (from === '/' || from === '/home') {
+						// toast.success('Login Successful');
+						navigate('/home');
+					} else {
+						// toast.success('Login Successful');
+						navigate(from, { replace: true });
+					}
+				} else {
+					// toast.error('Please verify your Email!');
+					handlerOnLogout();
+				}
 			})
 			.catch((error) => {
 				// Handle Errors here.
@@ -50,6 +78,17 @@ const Login = () => {
 				setError(errorMessage);
 				console.error(error);
 				// ...
+			});
+	};
+
+	// User logout
+	const handlerOnLogout = () => {
+		methodSignOut()
+			.then(() => {
+				// Sign-out successful.
+			})
+			.catch((error) => {
+				// An error happened.
 			});
 	};
 

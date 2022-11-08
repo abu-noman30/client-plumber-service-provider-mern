@@ -4,6 +4,7 @@ import AllServices from '../Pages/AllServices/AllServices';
 import Error from '../Pages/Error/Error';
 import Home from '../Pages/Home/Home';
 import Login from '../Pages/Login/Login';
+import ServiceDetails from '../Pages/ServiceDetails/ServiceDetails';
 
 const router = createBrowserRouter([
 	{
@@ -24,6 +25,13 @@ const router = createBrowserRouter([
 				element: <AllServices />,
 				loader: async () => {
 					return await fetch('http://localhost:5000/services');
+				}
+			},
+			{
+				path: 'services/:id',
+				element: <ServiceDetails />,
+				loader: async ({ params }) => {
+					return await fetch(`http://localhost:5000/services/${params.id}`);
 				}
 			},
 			{

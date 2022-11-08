@@ -14,7 +14,7 @@ const Navbar = () => {
 		<>
 			{/* Navbar Container */}
 
-			<div className='navbar-container mb-10'>
+			<div className='navbar-container fixed z-10 w-full'>
 				<nav className='bg-gray-300 w-full border-b md:border-0 md:static bg-gradient-to-l from-gray-400 via-gray-300 to-gray-200 shadow-xl rounded-lg'>
 					<div className='items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8'>
 						<div className='flex items-center justify-between py-3 md:py-5 md:block'>

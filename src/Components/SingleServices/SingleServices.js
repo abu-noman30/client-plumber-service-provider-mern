@@ -4,7 +4,7 @@ import { PhotoProvider, PhotoView } from 'react-photo-view';
 import { Link } from 'react-router-dom';
 
 const SingleServices = (props) => {
-	const { img, name, description, rating, totalPrice } = props.service;
+	const { img, name, description, rating, totalPrice, _id } = props.service;
 	return (
 		<>
 			{/* Single Service Container */}
@@ -44,12 +44,14 @@ const SingleServices = (props) => {
 						<Link to='/services/1'>
 							<div className='flex flex-wrap'>
 								{/* :SMALL BUTTON 1c */}
-								<button
-									type='button'
-									className='relative inline-flex items-center px-5 py-2 rounded-full border border-transparent bg-blue-600 text-sm text-white font-medium uppercase hover:px-6 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
-								>
-									View Details
-								</button>
+								<Link to={`/services/${_id}`}>
+									<button
+										type='button'
+										className='relative inline-flex items-center px-5 py-2 rounded-full border border-transparent bg-blue-600 text-sm text-white font-medium uppercase hover:px-6 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+									>
+										View Details
+									</button>
+								</Link>
 							</div>
 						</Link>
 						{/* ::Price & Rating */}

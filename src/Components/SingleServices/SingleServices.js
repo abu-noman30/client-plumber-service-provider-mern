@@ -1,5 +1,6 @@
 import React from 'react';
 import * as FAIcons from 'react-icons/fa';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
 import { Link } from 'react-router-dom';
 
 const SingleServices = (props) => {
@@ -10,11 +11,15 @@ const SingleServices = (props) => {
 			<div className='service-card mb-4 rounded-lg shadow-xl shadow-gray-700'>
 				<div className='group h-full border-gray-500 border-opacity-60 border-2 rounded-lg bg-white overflow-hidden shadow-lg'>
 					{/* :CARD IMAGE */}
-					<img
-						className='lg:h-48 md:h-36 w-full object-cover object-center transition duration-500 ease-in-out transform group-hover:scale-105'
-						src={img}
-						alt='blog'
-					/>
+					<PhotoProvider>
+						<PhotoView src={img}>
+							<img
+								className='lg:h-48 md:h-36 w-full object-cover object-center transition duration-500 ease-in-out transform group-hover:scale-105'
+								src={img}
+								alt='blog'
+							/>
+						</PhotoView>
+					</PhotoProvider>
 
 					{/* :CARD CATEGORY */}
 					<h2 className='pt-4 pb-1 px-6 inline-block title-font text-sm font-semibold text-gray-800 uppercase tracking-widest cursor-pointer hover:font-bold underline underline-offset-2'>

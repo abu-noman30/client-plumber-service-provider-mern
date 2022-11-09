@@ -1,4 +1,5 @@
 import React from 'react';
+import * as FAIcons from 'react-icons/fa';
 
 const SingleReview = (props) => {
 	const {
@@ -8,6 +9,8 @@ const SingleReview = (props) => {
 
 	const date = dateTime.split(',')[0];
 	const time = dateTime.split(',')[1];
+
+	const svg = [1, 2, 3, 4, 5];
 
 	return (
 		<>
@@ -32,6 +35,17 @@ const SingleReview = (props) => {
 					</div>
 					{/* ::Review Content */}
 					<div className='col-span-12 md:col-span-9 mt-5 sm:mt-0 sm:ml-3 px-4 space-y-2  flex flex-col items-center md:items-start justify-center md:justify-start '>
+						{/* Block Quote */}
+						<div className='border-b-2 border-black w-full'>
+							<div className='flex gap-0.5 text-yellow-300 mb-2 items-center justify-center md:justify-end '>
+								{svg.map((item, index) => (
+									<span key={index}>
+										<FAIcons.FaStar />
+									</span>
+								))}
+							</div>
+						</div>
+
 						{/* :::title */}
 						<p className='text-base text-gray-700  underline underline-offset-2 font-bold '>
 							<span className=''>{title}</span>

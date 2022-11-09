@@ -76,7 +76,7 @@ const AddServices = () => {
 					<div className='mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8'>
 						<div className='grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5'>
 							<div className='lg:col-span-2 lg:py-12'>
-								<h1 className='max-w-xl text-3xl'>Recently Added Service:</h1>
+								<h1 className='max-w-xl text-3xl font-bold italic underline'>Recently Added Service:</h1>
 
 								<div className='mt-8'>
 									{/* Single Service Container */}

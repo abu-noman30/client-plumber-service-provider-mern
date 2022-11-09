@@ -13,14 +13,14 @@ const SingleReview = (props) => {
 		<>
 			{/* Single Review Container */}
 			<div className='single-review-container'>
-				<article className='py-3 grid grid-cols-12 border-2 border-gray-100 shadow-lg shadow-gray-400 rounded-lg bor mb-2'>
+				<article className='py-3 grid grid-cols-12 border-2 border-gray-100 shadow-lg shadow-gray-400 rounded-lg bor mb-2 '>
 					{/* ::Auhtor Details */}
-					<div className='col-span-12 md:col-span-3 border-r-2 px-1'>
+					<div className='col-span-12 md:col-span-3 border-r-2 px-1 border-b-2 md:border-b-0 pb-3 md:pb-0'>
 						{/* :::avatar */}
-						<div className=' flex flex-col items-center justify-center overflow-hidden' aria-label='avatar'>
+						<div className=' flex flex-col items-center justify-center overflow-hidden ' aria-label='avatar'>
 							<img src={img} alt='' className='w-12 h-12 rounded-full' />
 						</div>
-						<div className='ml-3 sm:ml-0 space-y-1.5 flex flex-col items-center justify-center'>
+						<div className='ml-3 sm:ml-0 space-y-1.5 flex flex-col items-center justify-center '>
 							{/* :::name */}
 							<p className='text-sm text-gray-700 font-semibold'>{name}</p>
 							{/* :::rating */}

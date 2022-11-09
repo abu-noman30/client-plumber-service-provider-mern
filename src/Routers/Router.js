@@ -5,6 +5,7 @@ import Blank from '../Pages/Blank/Blank';
 import Error from '../Pages/Error/Error';
 import Home from '../Pages/Home/Home';
 import Login from '../Pages/Login/Login';
+import MyAllReviews from '../Pages/MyReviews/MyAllReviews';
 import Register from '../Pages/Register/Register';
 import ServiceDetails from '../Pages/ServiceDetails/ServiceDetails';
 
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
 				loader: async ({ params }) => {
 					return await fetch(`http://localhost:5000/services/${params.id}`);
 				}
+			},
+			{
+				path: 'my-reviews',
+				element: <MyAllReviews />
 			},
 			{
 				path: 'login',

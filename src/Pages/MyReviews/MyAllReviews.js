@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import MySingleReview from '../../Components/MySingleReview/MySingleReview';
+import { FbaseAuthContext } from '../../Context/AuthContextAPI';
 
 const MyAllReviews = () => {
-	const quotes = [1, 2, 3, 4, 5];
+	const { currentUser } = useContext(FbaseAuthContext);
+	const [myReviewsData, setMyReviewsData] = useState([]);
 
+	useEffect(() => {
+		const fetchApi = async () => {
+			const res = await fetch(`http://localhost:5000/myreviews?email=${currentUser.email}`);
+			const data = await res.json();
+			// console.log(data);
+			setMyReviewsData(data);
+		};
+		fetchApi();
+	}, [currentUser.email]);
 	return (
 		<>
 			{/* My All Reviews Container */}
@@ -19,9 +30,9 @@ const MyAllReviews = () => {
 						</div>
 
 						<div className='mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'>
-							{quotes.map((quote, index) => (
-								<div key={index}>
-									<MySingleReview />
+							{myReviewsData.map((myReview, index) => (
+								<div key={myReview._id}>
+									<MySingleReview myReview={myReview} />
 								</div>
 							))}
 						</div>

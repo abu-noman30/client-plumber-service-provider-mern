@@ -1,7 +1,11 @@
 import React from 'react';
 import * as FAIcons from 'react-icons/fa';
 
-const MySingleReview = () => {
+const MySingleReview = (props) => {
+	const {
+		userInfo: { name, message },
+		serviceInfo
+	} = props.myReview;
 	const svg = [1, 2, 3, 4, 5];
 	return (
 		<>
@@ -18,13 +22,13 @@ const MySingleReview = () => {
 						</div>
 
 						<div className='mt-4'>
-							<h3 className='text-xl font-bold text-gray-800 italic sm:text-2xl'>Service: </h3>
+							<h3 className='text-xl font-bold text-gray-800 italic sm:text-2xl'>Service: {serviceInfo.name}</h3>
 
-							<p className='mt-4 text-gray-600'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam cumque recusandae dolorum porro, quasi sunt necessitatibus dolorem ab laudantium vel.</p>
+							<p className='mt-4 text-gray-600'>{message}</p>
 						</div>
 					</div>
 
-					<footer className='mt-8 text-gray-500'>__Eddie Murphy</footer>
+					<footer className='mt-8 text-gray-500'>__{name}</footer>
 					<div className=' flex  items-center justify-between mt-3'>
 						<button
 							type='button'

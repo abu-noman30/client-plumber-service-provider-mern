@@ -19,9 +19,7 @@ const Services = () => {
 			<div className='services-container my-20 '>
 				{/* Title Bar */}
 				<div className='title-bar text-center'>
-					<h1 className='text-5xl font-bold my-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-blue-600 border-x-4 border-blue-900 w-11/12 md:w-8/12 lg:w-3/12 mx-auto'>
-						My Services
-					</h1>
+					<h1 className='text-5xl font-bold my-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-blue-600 border-x-4 border-blue-900 w-11/12 md:w-8/12 lg:w-3/12 mx-auto'>My Services</h1>
 					<p className='text-zinc-500 text-base font-normal mb-10'>
 						Here are some of my services that I provide to my clients and I
 						<br />
@@ -43,9 +41,7 @@ const Services = () => {
 							<span className='absolute top-1/2 left-0 w-full opacity-0 transition-all duration-300 ease-in-out transform -translate-x-full -translate-y-1/2 group-hover:opacity-100 group-hover:translate-x-0'>
 								Click me!
 							</span>
-							<span className='transition-all duration-300 ease-in-out transform group-hover:opacity-0 group-hover:translate-x-full group-hover:translate-y-0'>
-								See All
-							</span>
+							<span className='transition-all duration-300 ease-in-out transform group-hover:opacity-0 group-hover:translate-x-full group-hover:translate-y-0'>See All</span>
 						</button>
 					</Link>
 				</div>

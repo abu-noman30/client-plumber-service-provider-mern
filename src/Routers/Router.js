@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
 import Root from '../Layouts/Root/Root';
-import AddReviews from '../Pages/AddReviews/AddReviews';
 import AllServices from '../Pages/AllServices/AllServices';
+import Blank from '../Pages/Blank/Blank';
 import Error from '../Pages/Error/Error';
 import Home from '../Pages/Home/Home';
 import Login from '../Pages/Login/Login';
@@ -37,10 +37,6 @@ const router = createBrowserRouter([
 				}
 			},
 			{
-				path: 'add-reviews',
-				element: <AddReviews />
-			},
-			{
 				path: 'login',
 				element: <Login />
 			},
@@ -49,6 +45,10 @@ const router = createBrowserRouter([
 				element: <Register />
 			}
 		]
+	},
+	{
+		path: 'blank',
+		element: <Blank />
 	}
 ]);
 

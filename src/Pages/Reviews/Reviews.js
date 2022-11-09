@@ -248,8 +248,8 @@ const Reviews = (props) => {
 								</p>
 							</div>
 
-							<div className='bg-white rounded-lg mb-8'>
-								<div className='mx-auto py-8 px-4 w-full max-w-7xl bg-white rounded-lg'>
+							<div className='bg-white w-full md:w-10/12 mx-auto rounded-lg mb-8'>
+								<div className='mx-auto py-8 px-4 w-full bg-white rounded-lg'>
 									{reviewsData.length === 0 ? (
 										<div className='flex flex-col items-center justify-center'>
 											<h1 className='text-3xl font-bold text-gray-500 text-center'>No Reviews Found</h1>

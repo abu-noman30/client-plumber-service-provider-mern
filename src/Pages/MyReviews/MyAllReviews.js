@@ -32,11 +32,17 @@ const MyAllReviews = () => {
 						</div>
 
 						<div className='mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'>
-							{myReviewsData.map((myReview, index) => (
-								<div key={myReview._id}>
-									<MySingleReview myReview={myReview} />
+							{myReviewsData.length === 0 ? (
+								<div className='flex justify-center items-center'>
+									<h1 className='text-2xl font-bold text-gray-500'>No Reviews Found</h1>
 								</div>
-							))}
+							) : (
+								myReviewsData.map((myReview, index) => (
+									<div key={myReview._id}>
+										<MySingleReview myReview={myReview} />
+									</div>
+								))
+							)}
 						</div>
 					</div>
 				</section>

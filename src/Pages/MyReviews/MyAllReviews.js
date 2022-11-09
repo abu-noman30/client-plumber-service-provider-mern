@@ -5,6 +5,7 @@ import { FbaseAuthContext } from '../../Context/AuthContextAPI';
 const MyAllReviews = () => {
 	const { currentUser } = useContext(FbaseAuthContext);
 	const [myReviewsData, setMyReviewsData] = useState([]);
+	const [refresh, setRefresh] = useState(false);
 
 	useEffect(() => {
 		const fetchApi = async () => {
@@ -12,9 +13,10 @@ const MyAllReviews = () => {
 			const data = await res.json();
 			// console.log(data);
 			setMyReviewsData(data);
+			setRefresh(!refresh);
 		};
 		fetchApi();
-	}, [currentUser.email]);
+	}, [currentUser.email, refresh]);
 	return (
 		<>
 			{/* My All Reviews Container */}

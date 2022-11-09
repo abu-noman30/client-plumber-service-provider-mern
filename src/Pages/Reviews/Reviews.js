@@ -124,6 +124,8 @@ const Reviews = (props) => {
 													type='text'
 													name='name'
 													placeholder='Your Name'
+													defaultValue={currentUser.displayName}
+													required
 													className='
                                       w-full
                                       rounded

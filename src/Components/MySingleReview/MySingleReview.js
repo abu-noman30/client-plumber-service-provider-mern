@@ -1,12 +1,38 @@
 import React from 'react';
 import * as FAIcons from 'react-icons/fa';
+import toast from 'react-hot-toast';
 
 const MySingleReview = (props) => {
 	const {
 		userInfo: { name, message },
-		serviceInfo
+		serviceInfo,
+		_id,
+		dateTime
 	} = props.myReview;
+
 	const svg = [1, 2, 3, 4, 5];
+
+	const hanlerOnDeleteReview = (id) => {
+		const agree = window.confirm('Are you sure to delete this review?');
+		if (agree === true) {
+			const fetchApi = async () => {
+				try {
+					const res = await fetch(`http://localhost:5000/myreviews/${id}`, {
+						method: 'DELETE'
+					});
+					const data = await res.json();
+					// console.log(data);
+					if (data && data.deletedCount > 0) {
+						toast.success('Review deleted successfully');
+						// toast
+					}
+				} catch (error) {
+					console.error(error);
+				}
+			};
+			fetchApi();
+		}
+	};
 	return (
 		<>
 			{/* My Single Review Container */}
@@ -28,7 +54,9 @@ const MySingleReview = (props) => {
 						</div>
 					</div>
 
-					<footer className='mt-8 text-gray-500'>__{name}</footer>
+					<footer className='mt-8 text-gray-500'>
+						__{name}__({dateTime})
+					</footer>
 					<div className=' flex  items-center justify-between mt-3'>
 						<button
 							type='button'
@@ -39,6 +67,9 @@ const MySingleReview = (props) => {
 						<button
 							type='button'
 							className='py-2 px-4 flex justify-center items-center  bg-red-600 hover:bg-red-700 focus:ring-red-500 focus:ring-offset-red-200 text-white  transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  w-16 h-12 rounded-lg '
+							onClick={() => {
+								hanlerOnDeleteReview(_id);
+							}}
 						>
 							<FAIcons.FaTrashAlt />
 						</button>

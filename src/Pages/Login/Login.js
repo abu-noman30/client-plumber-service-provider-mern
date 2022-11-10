@@ -2,7 +2,9 @@ import React, { useContext, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import toast from 'react-hot-toast';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import ClockLoader from 'react-spinners/ClockLoader';
 import { FbaseAuthContext } from '../../Context/AuthContextAPI';
+
 const Login = () => {
 	const { methodSignIn, methodGoogleSignIn, methodSignOut } = useContext(FbaseAuthContext);
 	const [error, setError] = useState('');
@@ -11,6 +13,20 @@ const Login = () => {
 
 	let from = location.state?.from?.pathname || '/';
 	console.log(from);
+
+	const { loading } = useContext(FbaseAuthContext);
+	// console.log(loading);
+
+	if (loading) {
+		return (
+			// Spinner component
+			<div className='w-1/2 mx-auto h-[28rem] my-auto flex items-center justify-center'>
+				<span className=''>
+					<ClockLoader color='#777777' />
+				</span>
+			</div>
+		);
+	}
 
 	const handlerOnSubmit = (e) => {
 		e.preventDefault();

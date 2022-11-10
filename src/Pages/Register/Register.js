@@ -3,14 +3,25 @@ import { Helmet } from 'react-helmet-async';
 import toast from 'react-hot-toast';
 import * as FAIcons from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
+import ClockLoader from 'react-spinners/ClockLoader';
 import { FbaseAuthContext } from '../../Context/AuthContextAPI';
 
 const Register = () => {
-	const { methodCreateUser, methodUpdateProfile, methodSignOut } = useContext(FbaseAuthContext);
+	const { loading, methodCreateUser, methodUpdateProfile, methodSignOut } = useContext(FbaseAuthContext);
 	const [error, setError] = useState('');
 
 	const navigate = useNavigate();
 
+	if (loading) {
+		return (
+			// Spinner component
+			<div className='w-1/2 mx-auto h-[28rem] my-auto flex items-center justify-center'>
+				<span className=''>
+					<ClockLoader color='#777777' />
+				</span>
+			</div>
+		);
+	}
 	const handlerOnSubmit = (e) => {
 		e.preventDefault();
 

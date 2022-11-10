@@ -1,12 +1,27 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useLoaderData } from 'react-router-dom';
+import ClockLoader from 'react-spinners/ClockLoader';
 import SingleServices from '../../Components/SingleServices/SingleServices';
+import { FbaseAuthContext } from '../../Context/AuthContextAPI';
 
 const AllServices = () => {
 	const loaderData = useLoaderData();
-	console.log(loaderData);
+	// console.log(loaderData);
 	const services = loaderData;
+	const { loading } = useContext(FbaseAuthContext);
+	// console.log(loading);
+
+	if (loading) {
+		return (
+			// Spinner component
+			<div className='w-1/2 mx-auto h-[28rem] my-auto flex items-center justify-center'>
+				<span className=''>
+					<ClockLoader color='#777777' />
+				</span>
+			</div>
+		);
+	}
 	return (
 		<>
 			<Helmet>

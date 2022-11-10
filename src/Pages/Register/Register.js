@@ -1,4 +1,6 @@
 import React, { useContext, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import toast from 'react-hot-toast';
 import * as FAIcons from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import { FbaseAuthContext } from '../../Context/AuthContextAPI';
@@ -37,7 +39,7 @@ const Register = () => {
 					form.reset();
 					console.log(user);
 					// ...
-					// toast.success('Your account has been created successfully. ');
+					toast.success('Your account has been created successfully. ');
 					navigate('/login');
 				})
 				.catch((error) => {
@@ -118,6 +120,9 @@ const Register = () => {
 	};
 	return (
 		<>
+			<Helmet>
+				<title>Register - plumBoy</title>
+			</Helmet>
 			{/* Register Container */}
 			<div className='register-container -mt-20 '>
 				<section>

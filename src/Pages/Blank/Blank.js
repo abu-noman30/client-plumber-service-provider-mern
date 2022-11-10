@@ -1,13 +1,17 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 const Blank = () => {
 	return (
 		<>
+			<Helmet>
+				<title>Blank - plumBoy</title>
+			</Helmet>
 			{/* Blank Page Container */}
 			<div className='blank-page-container'>
-				<div className='bg-white '>
-					<div className='text-center w-full mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 z-20 h-screen'>
+				<div className='bg-no-repeat bg-gradient-to-r from-gray-500 via-white to-gray-200'>
+					<div className='text-center w-full mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 z-20 h-screen '>
 						<h2 className='text-3xl font-extrabold text-black  sm:text-4xl'>
 							<span className='block text-5xl my-3'>Want to Go to Add Review ?</span>
 							<span className='block text-indigo-500'>Sorry! you&#x27;r not Loged in.</span>

@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import MySingleReview from '../../Components/MySingleReview/MySingleReview';
 import { FbaseAuthContext } from '../../Context/AuthContextAPI';
 
@@ -19,6 +20,9 @@ const MyAllReviews = () => {
 	}, [currentUser.email, refresh]);
 	return (
 		<>
+			<Helmet>
+				<title>My Reviews - plumBoy</title>
+			</Helmet>
 			{/* My All Reviews Container */}
 			<div className='my-all-reviews-container'>
 				<section className='bg-gray-100'>
@@ -33,7 +37,7 @@ const MyAllReviews = () => {
 
 						{myReviewsData.length === 0 ? (
 							<div className='grid grid-cols-1 md:grid-cols-2 text-center my-100'>
-								<h1 className='text-3xl font-bold text-gray-500 md:text-left text-center mt-24 md:mb-0 mb-10 italic'>No Review Found....!</h1>
+								<h1 className='text-3xl font-bold text-gray-500 md:text-left text-center mt-24 md:mb-0 mb-10 italic'>No Reviews were Added....!</h1>
 								<img src='https://i.ibb.co/d4wGMyc/no-review-found.png' alt='' className='mt-5' />
 							</div>
 						) : (

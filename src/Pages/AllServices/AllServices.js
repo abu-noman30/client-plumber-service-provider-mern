@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useLoaderData } from 'react-router-dom';
 import SingleServices from '../../Components/SingleServices/SingleServices';
 
@@ -8,6 +9,9 @@ const AllServices = () => {
 	const services = loaderData;
 	return (
 		<>
+			<Helmet>
+				<title>All Services - plumBoy</title>
+			</Helmet>
 			{/* All Services Container */}
 			<div className='all-services-container mb-20'>
 				{/* Title Bar */}

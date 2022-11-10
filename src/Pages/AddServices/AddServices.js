@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import toast from 'react-hot-toast';
 import * as FAIcons from 'react-icons/fa';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
@@ -70,6 +71,9 @@ const AddServices = () => {
 	}, [refresh]);
 	return (
 		<>
+			<Helmet>
+				<title>Add Service - plumBoy</title>
+			</Helmet>
 			{/* Add Services Container */}
 			<div className='add-services-container'>
 				<section className='bg-gray-100'>

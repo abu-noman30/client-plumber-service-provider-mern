@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import * as FAIcons from 'react-icons/fa';
 import { useLoaderData } from 'react-router-dom';
 import Reviews from '../Reviews/Reviews';
@@ -13,6 +14,9 @@ const ServiceDetails = () => {
 
 	return (
 		<>
+			<Helmet>
+				<title>ServiceDetails - plumBoy</title>
+			</Helmet>
 			{/* Service Details Section */}
 			<div className='service-details-section'>
 				<div className='mx-auto py-8 px-8 w-11/12  bg-white rounded-lg'>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import Header from '../../Layouts/Header/Header';
 import About from '../../Shared/About/About';
 import CallToAction from '../../Shared/CallToAction/CallToAction';
@@ -8,6 +9,9 @@ import Services from '../../Shared/Services/Services';
 const Home = () => {
 	return (
 		<>
+			<Helmet>
+				<title>Home - plumBoy</title>
+			</Helmet>
 			{/* Header Section */}
 			<div className='header-section'>
 				<Header />

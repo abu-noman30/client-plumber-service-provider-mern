@@ -1,4 +1,6 @@
 import React, { useContext, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import toast from 'react-hot-toast';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FbaseAuthContext } from '../../Context/AuthContextAPI';
 const Login = () => {
@@ -30,14 +32,13 @@ const Login = () => {
 				// ...
 				if (user && user.uid) {
 					if (from === '/' || from === '/home') {
-						// toast.success('Login Successful');
+						toast.success('Login Successful');
 						navigate('/home');
 					} else {
-						// toast.success('Login Successful');
+						toast.success('Login Successful');
 						navigate(from, { replace: true });
 					}
 				} else {
-					// toast.error('Please verify your Email!');
 					handlerOnLogout();
 				}
 			})
@@ -64,11 +65,10 @@ const Login = () => {
 						// toast.success('Login Successful');
 						navigate('/home');
 					} else {
-						// toast.success('Login Successful');
+						toast.success('Login Successful');
 						navigate(from, { replace: true });
 					}
 				} else {
-					// toast.error('Please verify your Email!');
 					handlerOnLogout();
 				}
 			})
@@ -94,6 +94,9 @@ const Login = () => {
 
 	return (
 		<>
+			<Helmet>
+				<title>Login - plumBoy</title>
+			</Helmet>
 			{/* Login Container */}
 			<div className='login-container -mt-20 bg-gradient-to-l from-gray-900 to-gray-300'>
 				<div className='flex flex-col items-center justify-center space-y-10 py-20 px-4 sm:px-6 lg:px-8 bg-[url(https://i.ibb.co/bdnJtg1/Plumbers-in-Wirral.jpg)] bg-no-repeat bg-cover mix-blend-overlay bg-fixed'>

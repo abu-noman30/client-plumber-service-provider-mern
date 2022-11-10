@@ -4,6 +4,7 @@ import SingleServices from '../../Components/SingleServices/SingleServices';
 
 const Services = () => {
 	const [homeServices, setHomeServices] = useState([]);
+
 	useEffect(() => {
 		const fetchApi = async () => {
 			const res = await fetch('http://localhost:5000/home-services');
@@ -13,6 +14,7 @@ const Services = () => {
 		};
 		fetchApi();
 	}, []);
+
 	return (
 		<>
 			{/* Services Container */}

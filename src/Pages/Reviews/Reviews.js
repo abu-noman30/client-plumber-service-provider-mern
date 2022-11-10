@@ -1,4 +1,5 @@
 import { React, useContext, useEffect, useState } from 'react';
+import toast from 'react-hot-toast';
 import { Link, useLocation } from 'react-router-dom';
 import ReviewBackground from '../../Components/ReviewBackground/ReviewBackground';
 import SingleReview from '../../Components/SingleReview/SingleReview';
@@ -37,7 +38,7 @@ const Reviews = (props) => {
 				const data = await res.json();
 				// console.log(data);
 				if (data && data.acknowledged === true) {
-					alert('Review added successfully');
+					toast.success('Review Added Successfully');
 					form.reset();
 				}
 			};

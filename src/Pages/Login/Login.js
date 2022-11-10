@@ -46,6 +46,12 @@ const Login = () => {
 				setError('');
 				console.log(user);
 				// ...
+				const authoriseUser = {
+					email: user.email,
+					uid: user.uid
+				};
+				fetchJWT(authoriseUser);
+				// ...
 				if (user && user.uid) {
 					if (from === '/' || from === '/home') {
 						toast.success('Login Successful');
@@ -76,6 +82,13 @@ const Login = () => {
 				const user = result.user;
 				console.log(user);
 				// ...
+				// ...
+				const authoriseUser = {
+					email: user.email,
+					uid: user.uid
+				};
+				fetchJWT(authoriseUser);
+				// ...
 				if (user && user.uid) {
 					if (from === '/' || from === '/home') {
 						// toast.success('Login Successful');
@@ -102,12 +115,33 @@ const Login = () => {
 		methodSignOut()
 			.then(() => {
 				// Sign-out successful.
+				localStorage.removeItem('jwtToken');
 			})
 			.catch((error) => {
 				// An error happened.
 			});
 	};
 
+	// Middleware(Authentication)-JWT(Token)
+
+	const fetchJWT = async (authoriseUser) => {
+		const res = await fetch('http://localhost:5000/jwt', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(authoriseUser)
+		});
+		const data = await res.json();
+		console.log(data);
+
+		localStorage.setItem('jwtToken', data.accessToken);
+		try {
+		} catch (error) {
+			console.error(error);
+		}
+	};
+	// ----------------------------------------
 	return (
 		<>
 			<Helmet>

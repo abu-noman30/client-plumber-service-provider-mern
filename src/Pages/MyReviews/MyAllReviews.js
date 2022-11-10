@@ -4,20 +4,33 @@ import MySingleReview from '../../Components/MySingleReview/MySingleReview';
 import { FbaseAuthContext } from '../../Context/AuthContextAPI';
 
 const MyAllReviews = () => {
-	const { currentUser } = useContext(FbaseAuthContext);
+	const { currentUser, methodSignOut } = useContext(FbaseAuthContext);
 	const [myReviewsData, setMyReviewsData] = useState([]);
 	const [refresh, setRefresh] = useState(false);
 
 	useEffect(() => {
 		const fetchApi = async () => {
-			const res = await fetch(`http://localhost:5000/myreviews?email=${currentUser.email}`);
-			const data = await res.json();
-			// console.log(data);
-			setMyReviewsData(data);
-			setRefresh(!refresh);
+			const res = await fetch(`http://localhost:5000/myreviews?email=${currentUser.email}`, {
+				method: 'GET',
+				headers: {
+					Accept: 'application/json',
+					'Content-Type': 'application/json',
+					authorization: `Bearer ${localStorage.getItem('jwtToken')}`
+				}
+			});
+			if (res.status === 401 || res.status === 403) {
+				localStorage.removeItem('jwtToken');
+				return methodSignOut();
+			} else {
+				const data = await res.json();
+				// console.log(data);
+				setMyReviewsData(data);
+				setRefresh(!refresh);
+			}
 		};
 		fetchApi();
-	}, [currentUser.email, refresh]);
+	}, [currentUser.email, refresh, methodSignOut]);
+
 	return (
 		<>
 			<Helmet>

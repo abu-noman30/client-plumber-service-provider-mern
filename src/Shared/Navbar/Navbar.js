@@ -28,6 +28,7 @@ const Navbar = () => {
 		methodSignOut()
 			.then(() => {
 				// Sign-out successful.
+				localStorage.removeItem('jwtToken');
 			})
 			.catch((error) => {
 				// An error happened.

@@ -1,70 +1,93 @@
-# Getting Started with Create React App
+# EduCamp (ReactJS)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. Live Website: https://reactjs-plumboy-service-review.web.app/
+2. Server Side: https://server-plumboy-service.vercel.app/
 
-## Available Scripts
 
-In the project directory, you can run:
+## Description:
 
-### `npm start`
+1. A web base application (ReactJs).
+2. At "Home" page user find "My Services" section and from the recently Added services by clicking "VIEW DETAILS" user can see the "Service Details" and other users "Reviews".
+3. User can add their review for the specific Services by submitting Review form.But for that, user have to be Loged in,if the user is new user can register themselves. 
+4. At Home Page under the Services, by clicking "See All" button user find all the available services and user can post their reviews for all services.
+5. If user is Loged in, user can view the all Reviews they already posted at "My Reviews".
+6. User can "UPDATE" and Can "DELETE" their reviews they already posted.
+7. From "Add Service" page "Admin" of the system can post New Services...and It will show on the Home Page as well as All Services page.
+8. System is Fully Authenticate By "Google Firebase Authentication".
+9. There are also "Blog" page. From there user can find Questions and Answers.
+10. System is fully responsive.
+11. All Data's are hosted on the database "MongoDB" and server side hosted on "vercel".
+#
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technology Uses (Frameworks, libraries):
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+##### Frameworks:
+1. Tailwind CSS.
+2. react-router-dom
 
-### `npm test`
+##### Libraries:
+1. React JS
+2. Daisy UI
+3. Flowbite
+4. react-hot-toast
+5. react-icons
+6. react-spinners
+7. aos
+8. sweetalert2
+9. react-photo-view
+10. react-helmet-async
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#
+## Deploy:
+1. Vercel (Server Side)
+2. Firebase (Client Side)
 
-### `npm run build`
+#
+## Database:
+1. MongoDB(NoSQL)
+#
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## App Demo:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 1. Home Page:
+##
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![App Screenshot](public/Images/Website_Screenshot.png)
 
-### `npm run eject`
+##
+### 2. All Services:
+##
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![App Screenshot](public/Images/Website_Screenshot_1.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+##
+### 3. My Reviews:
+##
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![App Screenshot](public/Images/Website_Screenshot_6.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+##
+### 4. Service Details:
+##
 
-## Learn More
+![App Screenshot](public/Images/Website_Screenshot_2.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+##
+### 5. Register:
+##
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![App Screenshot](public/Images/Website_Screenshot_4.png)
 
-### Code Splitting
+##
+### 6. Add Service:
+##
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![App Screenshot](public/Images/Website_Screenshot_5.png)
 
-### Analyzing the Bundle Size
+##
+### 7. Login:
+##
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![App Screenshot](public/Images/Website_Screenshot_3.png)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+##

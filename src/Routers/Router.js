@@ -3,6 +3,7 @@ import Root from '../Layouts/Root/Root';
 import AddServices from '../Pages/AddServices/AddServices';
 import AllServices from '../Pages/AllServices/AllServices';
 import Blank from '../Pages/Blank/Blank';
+import Blogs from '../Pages/Blogs/Blogs';
 import Error from '../Pages/Error/Error';
 import Home from '../Pages/Home/Home';
 import Login from '../Pages/Login/Login';
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
 			{
 				path: 'register',
 				element: <Register />
+			},
+			{
+				path: 'blogs',
+				element: <Blogs />
 			}
 		]
 	},

@@ -12,13 +12,13 @@ const Navbar = () => {
 			{ title: 'Home', path: '/home' },
 			{ title: 'My reviews', path: '/my-reviews' },
 			{ title: 'Add Service', path: '/add-services' },
-			{ title: 'Blogs', path: 'blogs' }
+			{ title: 'Blogs', path: '/blogs' }
 		];
 		navigation = [...loginNavigation];
 	} else {
 		const noLoginNavigation = [
 			{ title: 'Home', path: '/home' },
-			{ title: 'Blogs', path: 'blogs' }
+			{ title: 'Blogs', path: '/blogs' }
 		];
 		navigation = [...noLoginNavigation];
 	}

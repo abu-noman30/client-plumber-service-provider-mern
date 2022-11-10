@@ -41,7 +41,7 @@ const MySingleReview = (props) => {
 		const form = e.target;
 		const title = form.title.value;
 		const message = form.message.value;
-		console.log(title, message, _id);
+		// console.log(title, message, _id);
 
 		if (title && message) {
 			const updateReviewData = {
@@ -58,9 +58,10 @@ const MySingleReview = (props) => {
 						body: JSON.stringify(updateReviewData)
 					});
 					const data = await res.json();
-					console.log(data);
+					// console.log(data);
 					if (data && data.modifiedCount > 0) {
 						toast.success('Review updated successfully');
+						form.reset();
 					}
 				} catch (error) {
 					console.error(error);
@@ -94,7 +95,8 @@ const MySingleReview = (props) => {
 						</div>
 
 						<footer className='mt-8 text-gray-500'>
-							__{name}__({dateTime})
+							<p className='text-xs mb-1 '>__{name}</p>
+							<p className='text-xs mb-1 '>{dateTime}</p>
 						</footer>
 					</div>
 					<div className=' flex  items-center justify-between mt-3'>
@@ -185,7 +187,7 @@ const MySingleReview = (props) => {
                                       w-full
                                       text-gray-100
                                       hover:text-gray-100
-                                      bg-black
+                                      bg-blue-700
                                       rounded
                                       border border-primary
                                       p-3
@@ -195,7 +197,7 @@ const MySingleReview = (props) => {
                                       hover:bg-gray-700
                                       '
 												>
-													Send Message
+													UPDATE
 												</button>
 											</div>
 										</form>

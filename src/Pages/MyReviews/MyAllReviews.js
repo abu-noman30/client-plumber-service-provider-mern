@@ -31,19 +31,20 @@ const MyAllReviews = () => {
 							</div>
 						</div>
 
-						<div className='mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'>
-							{myReviewsData.length === 0 ? (
-								<div className='flex justify-center items-center'>
-									<h1 className='text-2xl font-bold text-gray-500'>No Reviews Found</h1>
-								</div>
-							) : (
-								myReviewsData.map((myReview, index) => (
+						{myReviewsData.length === 0 ? (
+							<div className='grid grid-cols-1 md:grid-cols-2 text-center my-100'>
+								<h1 className='text-3xl font-bold text-gray-500 md:text-left text-center mt-24 md:mb-0 mb-10 italic'>No Review Found....!</h1>
+								<img src='https://i.ibb.co/d4wGMyc/no-review-found.png' alt='' className='mt-5' />
+							</div>
+						) : (
+							<div className='mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'>
+								{myReviewsData.map((myReview, index) => (
 									<div key={myReview._id}>
 										<MySingleReview myReview={myReview} />
 									</div>
-								))
-							)}
-						</div>
+								))}
+							</div>
+						)}
 					</div>
 				</section>
 			</div>

@@ -16,9 +16,9 @@ const SingleReview = (props) => {
 		<>
 			{/* Single Review Container */}
 			<div className='single-review-container'>
-				<article className='py-3 grid grid-cols-12 border-2 border-gray-100 shadow-lg shadow-gray-400 rounded-lg bor mb-2 '>
+				<article className='py-3 grid grid-cols-12 border-2 border-gray-100 shadow-lg shadow-gray-400 rounded-lg bor mb-2 bg-[url(https://i.ibb.co/vktY67z/review-background-1.jpg)] bg-no-repeat object-fill'>
 					{/* ::Auhtor Details */}
-					<div className='col-span-12 md:col-span-3 border-r-2 px-1 border-b-2 md:border-b-0 pb-3 md:pb-0'>
+					<div className='col-span-12 md:col-span-3 border-gray-800 border-r-2 px-1 border-b-2 md:border-b-0 pb-3 md:pb-0'>
 						{/* :::avatar */}
 						<div className=' flex flex-col items-center justify-center overflow-hidden ' aria-label='avatar'>
 							<img src={img} alt='' className='w-12 h-12 rounded-full' />
@@ -51,7 +51,7 @@ const SingleReview = (props) => {
 							<span className=''>{title}</span>
 						</p>
 						{/* :::text */}
-						<p className='text-sm text-gray-500 font-medium ml-5'>{message}</p>
+						<p className='text-sm text-gray-500 font-medium ml-5 break-before-words'>{message}</p>
 					</div>
 				</article>
 			</div>

@@ -14,16 +14,14 @@ const Reviews = (props) => {
 	const handlerOnSubmit = (e) => {
 		e.preventDefault();
 		const form = e.target;
-		const name = form.name.value;
-		const email = form.email.value;
 		const title = form.title.value;
 		const message = form.message.value;
 
 		// console.log(name, title, message, email);
 
-		if (name && title && message && email) {
+		if (title && message) {
 			const reviewData = {
-				userInfo: { name: name, email: email, title: title, message: message, img: currentUser.photoURL },
+				userInfo: { name: currentUser.displayName, email: currentUser.email, title: title, message: message, img: currentUser.photoURL },
 				serviceInfo: { name: serviceData.name, id: serviceData._id },
 				dateTime: new Date().toLocaleString()
 			};
@@ -66,7 +64,7 @@ const Reviews = (props) => {
 	return (
 		<>
 			{/* Add Reviews Container */}
-			<div className='add-reviews-container my-20'>
+			<div className='add-reviews-container my-10 w-11/12 mx-auto'>
 				{/* <!-- component --> */}
 				{currentUser && currentUser.uid ? (
 					<div className='grid grid-cols-12 lg:gap-8 '>
@@ -90,8 +88,9 @@ const Reviews = (props) => {
 							<div className='bg-white rounded-lg mb-8'>
 								<div className='mx-auto py-8 px-4 w-full max-w-7xl bg-white rounded-lg'>
 									{reviewsData.length === 0 ? (
-										<div className='flex flex-col items-center justify-center'>
-											<h1 className='text-3xl font-bold text-gray-500'>No Reviews Found</h1>
+										<div className='grid grid-cols-1 text-center my-100 bg-gray-200 rounded-lg'>
+											<h1 className='text-3xl font-bold text-gray-500 text-center my-10 italic'>No Review Found....!</h1>
+											<img src='https://i.ibb.co/d4wGMyc/no-review-found.png' alt='' className='mt-5 p-4' />
 										</div>
 									) : (
 										<div className='mx-auto max-w-4xl flex flex-col'>
@@ -112,14 +111,14 @@ const Reviews = (props) => {
 						<div className='add-reviews-container col-span-12 md:col-span-6 lg:col-span-4 lg:mr-8 '>
 							{/* Review-form */}
 							{currentUser && currentUser.uid ? (
-								<div className='w-full p-4'>
-									<div className='bg-gray-100 relative rounded-lg p-8 sm:p-12 shadow-lg'>
+								<div className='w-full p-4 -mt-5 -mb-5 md:mt-24 md:mb-0 sticky top-44 pb-16 '>
+									<div className='bg-gray-100 relative rounded-lg p-8 sm:p-12 shadow-lg '>
 										<form
 											onSubmit={(e) => {
 												handlerOnSubmit(e);
 											}}
 										>
-											<div className='mb-6'>
+											{/* <div className='mb-6'>
 												<input
 													type='text'
 													name='name'
@@ -156,7 +155,7 @@ const Reviews = (props) => {
                                       focus:border-primary
                                       '
 												/>
-											</div>
+											</div> */}
 											<div className='mb-6'>
 												<input
 													type='text'
@@ -202,8 +201,8 @@ const Reviews = (props) => {
                                       hover:text-gray-100
                                       bg-black
                                       rounded
+																			font-bold
                                       border border-primary
-                                      
                                       p-3
                                       transition
                                       ease-in-out
@@ -211,7 +210,7 @@ const Reviews = (props) => {
                                       hover:bg-gray-700
                                       '
 												>
-													Send Message
+													Send
 												</button>
 											</div>
 										</form>
@@ -229,7 +228,7 @@ const Reviews = (props) => {
 				) : (
 					<div className='p-5'>
 						<div className='reviews-container col-span-12 md:col-span-6 lg:col-span-8 border-5 p-4'>
-							<div className='flex flex-col md:flex-row items-center justify-between'>
+							<div className='flex flex-col md:flex-row items-center justify-center'>
 								<div className='mb-5'>
 									<Link to='/blank'>
 										<button className='group relative inline-flex items-center px-5 py-2.5 rounded shadow-lg outline-none bg-zinc-200 text-gray-700 transition-all duration-200 ease-out hover:text-zincbg-zinc-200 hover:bg-transparent hover:shadow-none active:top-0.5 focus:outline-none text-4xl italic font-bold'>
@@ -252,12 +251,13 @@ const Reviews = (props) => {
 								<div className='mx-auto py-8 px-4 w-full bg-white rounded-lg'>
 									{reviewsData.length === 0 ? (
 										<div className='flex flex-col items-center justify-center'>
-											<h1 className='text-3xl font-bold text-gray-500 text-center'>No Reviews Found</h1>
+											<div className='grid grid-cols-1 text-center my-100 bg-gray-200 rounded-lg'>
+												<h1 className='text-3xl font-bold text-gray-500 text-center my-10 italic'>No Review Found....!</h1>
+												<img src='https://i.ibb.co/d4wGMyc/no-review-found.png' alt='' className='mt-5 p-4' />
+											</div>
 										</div>
 									) : (
 										<div className='mx-auto max-w-4xl flex flex-col'>
-											{/* :HEADER */}
-
 											{/* :REVIEWS */}
 											<div className=''>
 												{reviewsData.map((review) => (

@@ -31,19 +31,19 @@ const SingleServices = (props) => {
 					{/* :CARD FOOTER */}
 					<div className='pt-1 pb-4 px-6 flex justify-between items-center flex-wrap'>
 						{/* ::Service Details Button */}
-						<Link to='/services/1'>
-							<div className='flex flex-wrap'>
-								{/* :SMALL BUTTON 1c */}
-								<Link to={`/services/${_id}`}>
-									<button
-										type='button'
-										className='relative inline-flex items-center px-5 py-2 rounded-full border border-transparent bg-blue-600 text-sm text-white font-medium uppercase hover:px-6 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
-									>
-										View Details
-									</button>
-								</Link>
-							</div>
-						</Link>
+
+						<div className='flex flex-wrap'>
+							{/* :SMALL BUTTON 1c */}
+							<Link to={`/services/${_id}`}>
+								<button
+									type='button'
+									className='relative inline-flex items-center px-5 py-2 rounded-full border border-transparent bg-blue-600 text-sm text-white font-medium uppercase hover:px-6 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+								>
+									View Details
+								</button>
+							</Link>
+						</div>
+
 						{/* ::Price & Rating */}
 						<div className='mt-1 flex items-center'>
 							{/* Price */}

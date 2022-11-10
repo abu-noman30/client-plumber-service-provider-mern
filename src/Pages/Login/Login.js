@@ -95,14 +95,14 @@ const Login = () => {
 	return (
 		<>
 			{/* Login Container */}
-			<div className='login-container mb-20 bg-gradient-to-l from-gray-900 to-gray-300'>
-				<div className='flex flex-col items-center justify-center space-y-10 py-20 px-4 sm:px-6 lg:px-8 bg-[url(https://i.ibb.co/BPzLMHy/671308.jpg)] bg-no-repeat bg-cover mix-blend-overlay bg-fixed'>
+			<div className='login-container -mt-20 bg-gradient-to-l from-gray-900 to-gray-300'>
+				<div className='flex flex-col items-center justify-center space-y-10 py-20 px-4 sm:px-6 lg:px-8 bg-[url(https://i.ibb.co/bdnJtg1/Plumbers-in-Wirral.jpg)] bg-no-repeat bg-cover mix-blend-overlay bg-fixed'>
 					<div>
-						<h1 className='mt-6 text-center text-4xl font-extrabold text-gray-100 pt-10'>Sign in to your account</h1>
-						<p className='mt-2 text-center text-sm text-gray-200'>
+						<h1 className='mt-6 text-center text-5xl italic underline font-extrabold text-blue-700 pt-10'>Sign in</h1>
+						<p className='mt-4 text-center text-md font-bold text-gray-700'>
 							Or,{' '}
-							<Link to='/register' className='font-medium text-indigo-300 border-b border-indigo-600'>
-								Register your FREE Account{' '}
+							<Link to='/register' className='font-medium text-gray-800 border-b border-indigo-600 italic'>
+								Register your FREE Account,{' '}
 							</Link>
 						</p>
 					</div>
@@ -142,18 +142,14 @@ const Login = () => {
 									<label htmlFor='remember'>Remember me</label>
 								</div>
 								<div className='hidden lg:block'>
-									<a href='/' className='text-indigo-600'>
-										Forgot your Password?
-									</a>
+									<Link className='text-indigo-600'>Forgot your Password?</Link>
 								</div>
 							</div>
 							<div>
 								<button className='w-full bg-indigo-600 text-white rounded-md p-2'>Sign in</button>
 							</div>
 							<div className='block md:hidden text-center'>
-								<a href='/' className='text-indigo-600'>
-									Forgot your Password?
-								</a>
+								<Link className='text-indigo-600'>Forgot your Password?</Link>
 							</div>
 						</form>
 						<div className='relative pb-2'>

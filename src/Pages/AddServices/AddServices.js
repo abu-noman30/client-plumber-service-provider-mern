@@ -22,7 +22,7 @@ const AddServices = () => {
 		const totalprice = form.totalprice.value;
 		const rating = form.rating.value;
 
-		console.log(name, email, image, payment, description, totalprice, rating);
+		// console.log(name, email, image, payment, description, totalprice, rating);
 
 		if (name && email && image && payment && description && totalprice && rating) {
 			const serviceData = {
@@ -81,7 +81,7 @@ const AddServices = () => {
 								<div className='mt-8'>
 									{/* Single Service Container */}
 									{recentServices.map((service) => (
-										<div className='service-card mb-4 rounded-lg shadow-xl shadow-gray-700 w-full md:w-8/12 md:mx-auto lg:w-full '>
+										<div className='service-card mb-4 rounded-lg shadow-xl shadow-gray-700 w-full md:w-8/12 md:mx-auto lg:w-full ' key={service._id}>
 											<div className='group h-full border-gray-500 border-opacity-60 border-2 rounded-lg bg-white overflow-hidden shadow-lg'>
 												{/* :CARD IMAGE */}
 												<PhotoProvider>
@@ -104,19 +104,19 @@ const AddServices = () => {
 												{/* :CARD FOOTER */}
 												<div className='pt-1 pb-4 px-6 flex justify-between items-center flex-wrap'>
 													{/* ::Service Details Button */}
-													<Link to='/services/1'>
-														<div className='flex flex-wrap'>
-															{/* :SMALL BUTTON 1c */}
-															<Link to={`/services/${service._id}`}>
-																<button
-																	type='button'
-																	className='relative inline-flex items-center px-5 py-2 rounded-full border border-transparent bg-blue-600 text-sm text-white font-medium uppercase hover:px-6 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
-																>
-																	View Details
-																</button>
-															</Link>
-														</div>
-													</Link>
+
+													<div className='flex flex-wrap'>
+														{/* :SMALL BUTTON 1c */}
+														<Link to={`/services/${service._id}`}>
+															<button
+																type='button'
+																className='relative inline-flex items-center px-5 py-2 rounded-full border border-transparent bg-blue-600 text-sm text-white font-medium uppercase hover:px-6 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+															>
+																View Details
+															</button>
+														</Link>
+													</div>
+
 													{/* ::Price & Rating */}
 													<div className='mt-1 flex items-center'>
 														{/* Price */}
@@ -222,12 +222,8 @@ const AddServices = () => {
 									</div>
 
 									<div className='mt-4'>
-										<button type='submit' className='inline-flex w-full items-center justify-center rounded-lg bg-black px-5 py-3 text-white sm:w-auto'>
-											<span className='font-medium'> Submit </span>
-
-											<svg xmlns='http://www.w3.org/2000/svg' className='ml-3 h-5 w-5' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
-												<path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M14 5l7 7m0 0l-7 7m7-7H3' />
-											</svg>
+										<button type='submit' className='flex w-full items-center justify-center rounded-lg bg-black px-5 py-3 text-white sm:w-auto'>
+											<p className='font-medium'> Add Service </p>
 										</button>
 									</div>
 								</form>

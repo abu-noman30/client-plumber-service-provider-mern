@@ -119,16 +119,16 @@ const Register = () => {
 	return (
 		<>
 			{/* Register Container */}
-			<div className='register-container pt-20 '>
+			<div className='register-container -mt-20 '>
 				<section>
-					<div className='px-4 py-12 mx-auto '>
-						<div className='justify-center mx-auto text-left align-bottom transition-all transform bg-white rounded-lg sm:align-middle w-full md:w-10/12'>
+					<div className='mx-auto'>
+						<div className='justify-center mx-auto text-left align-bottom transition-all transform bg-white rounded-lg sm:align-middle w-full py-20'>
 							<div className='grid flex-wrap w-full items-center justify-around  grid-cols-1 md:grid-cols-12 mx-auto shadow-xl  rounded-xl '>
 								<div className=' p-3 w-full col-span-12 lg:col-span-5'>
-									<div className='flex flex-col max-w-full p-6 rounded-md sm:p-10 shadow-lg shadow-gray-800'>
+									<div className='flex flex-col max-w-full p-6 rounded-md sm:p-10 shadow-lg shadow-gray-600'>
 										<div className='mb-8 text-center'>
-											<h1 className='my-3 text-4xl font-bold'>Register</h1>
-											<p className='text-sm '>Register your free Account </p>
+											<h1 className='my-3 text-5xl font-bold text-blue-800 italic underline'>Register</h1>
+											<p className='mt-4 text-center text-md italic text-gray-700 '>Register your free Account </p>
 										</div>
 										<form
 											className=''
@@ -209,7 +209,7 @@ const Register = () => {
 												</div>
 												<Link rel='noopener noreferrer' to='/login' className='hover:underline'>
 													<p className='px-6 text-sm text-center mt-5'>
-														Allready Have an account? <span className='text-blue-600'>Login</span>
+														Already Have an account? <span className='text-blue-600'>Sign in</span>
 													</p>
 												</Link>
 											</div>
@@ -217,11 +217,7 @@ const Register = () => {
 									</div>
 								</div>
 								<div className='order-first hidden w-full lg:block lg:col-span-7 px-5'>
-									<img
-										className='object-fill h-[40rem] w-full bg-cover rounded-lg'
-										src='https://images.unsplash.com/photo-1491933382434-500287f9b54b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=80'
-										alt=''
-									/>
+									<img className='object-fill h-[40rem] w-full bg-cover rounded-lg' src='https://i.ibb.co/bdnJtg1/Plumbers-in-Wirral.jpg' alt='' />
 								</div>
 							</div>
 						</div>

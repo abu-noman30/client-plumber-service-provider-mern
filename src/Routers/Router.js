@@ -34,7 +34,7 @@ const router = createBrowserRouter([
 				path: 'services/:id',
 				element: <ServiceDetails />,
 				loader: async ({ params }) => {
-					return await fetch(`http://localhost:5000/services/${params.id}`);
+					return await fetch(`https://server-plumboy-service.vercel.app/services/${params.id}`);
 				}
 			},
 			{

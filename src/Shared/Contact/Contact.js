@@ -97,7 +97,7 @@ const Contact = () => {
 						<div className='order-2 md:order-3 col-span-full md:col-span-1 py-5 md:py-10 px-6'>
 							<div className='mx-auto max-w-xl flex flex-col space-y-5'>
 								{/* ::Title Contact Us */}
-								<h2 className='text-4xl font-oswald uppercase font-bold'>Contact us</h2>
+								<h2 className='text-4xl font-oswald uppercase font-bold'>Contact</h2>
 								{/* ::Text */}
 								<p className='text-sm text-gray-500'>
 									I am here to help and answer any question you might have. I absolutely love hearing from you! If you have any questions, comments or concerns, please let me know. I will get back to you as soon as I

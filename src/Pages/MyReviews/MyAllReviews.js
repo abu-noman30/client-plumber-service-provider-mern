@@ -10,7 +10,7 @@ const MyAllReviews = () => {
 
 	useEffect(() => {
 		const fetchApi = async () => {
-			const res = await fetch(`http://localhost:5000/myreviews?email=${currentUser.email}`, {
+			const res = await fetch(`https://server-plumboy-service.vercel.app/myreviews?email=${currentUser.email}`, {
 				method: 'GET',
 				headers: {
 					Accept: 'application/json',

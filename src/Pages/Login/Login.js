@@ -125,7 +125,7 @@ const Login = () => {
 	// Middleware(Authentication)-JWT(Token)
 
 	const fetchJWT = async (authoriseUser) => {
-		const res = await fetch('http://localhost:5000/jwt', {
+		const res = await fetch('https://server-plumboy-service.vercel.app/jwt', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'

@@ -38,7 +38,7 @@ const AddServices = () => {
 			};
 
 			const fetchApi = async () => {
-				const res = await fetch('http://localhost:5000/services', {
+				const res = await fetch('https://server-plumboy-service.vercel.app/services', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json'
@@ -61,7 +61,7 @@ const AddServices = () => {
 
 	useEffect(() => {
 		const fetchApi = async () => {
-			const res = await fetch('http://localhost:5000/recent-service');
+			const res = await fetch('https://server-plumboy-service.vercel.app/recent-service');
 			const data = await res.json();
 			// console.log(data);
 			setRecentServices(data);

@@ -26,7 +26,7 @@ const Reviews = (props) => {
 				dateTime: new Date().toLocaleString()
 			};
 			const fetchApi = async () => {
-				const res = await fetch('http://localhost:5000/add-review', {
+				const res = await fetch('https://server-plumboy-service.vercel.app/add-review', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json'
@@ -47,7 +47,7 @@ const Reviews = (props) => {
 
 	useEffect(() => {
 		const fetchApi = async () => {
-			const res = await fetch('http://localhost:5000/reviews', {
+			const res = await fetch('https://server-plumboy-service.vercel.app/reviews', {
 				method: 'GET',
 				headers: {
 					serviceId: serviceData._id

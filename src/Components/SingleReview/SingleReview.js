@@ -15,7 +15,7 @@ const SingleReview = (props) => {
 	return (
 		<>
 			{/* Single Review Container */}
-			<div className='single-review-container'>
+			<div className='single-review-container' data-aos='fade-right'>
 				<article className='py-3 grid grid-cols-12 border-2 border-gray-100 shadow-lg shadow-gray-400 rounded-lg bor mb-2 bg-[url(https://i.ibb.co/vktY67z/review-background-1.jpg)] bg-no-repeat object-fill'>
 					{/* ::Auhtor Details */}
 					<div className='col-span-12 md:col-span-3 border-gray-800 border-r-2 px-1 border-b-2 md:border-b-0 pb-3 md:pb-0'>

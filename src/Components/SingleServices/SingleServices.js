@@ -8,7 +8,7 @@ const SingleServices = (props) => {
 	return (
 		<>
 			{/* Single Service Container */}
-			<div className='service-card mb-4 rounded-lg shadow-xl shadow-gray-700'>
+			<div className='service-card mb-4 rounded-lg shadow-xl shadow-gray-700' data-aos='zoom-in'>
 				<div className='group h-full border-gray-500 border-opacity-60 border-2 rounded-lg bg-white overflow-hidden shadow-lg'>
 					{/* :CARD IMAGE */}
 					<PhotoProvider>

@@ -16,7 +16,7 @@ const AllServices = () => {
 
 	useEffect(() => {
 		const fetchApi = async () => {
-			const res = await fetch(`http://localhost:5000/services?currentPage=${currentPage}&perPageData=${perPageData}`);
+			const res = await fetch(`https://server-plumboy-service.vercel.app/services?currentPage=${currentPage}&perPageData=${perPageData}`);
 			const data = await res.json();
 			console.log(data);
 			setTotalData(data.totalData);

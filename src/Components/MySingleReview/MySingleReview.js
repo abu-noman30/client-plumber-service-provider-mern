@@ -19,7 +19,7 @@ const MySingleReview = (props) => {
 		if (agree === true) {
 			const fetchApi = async () => {
 				try {
-					const res = await fetch(`http://localhost:5000/myreviews/${id}`, {
+					const res = await fetch(`https://server-plumboy-service.vercel.app/myreviews/${id}`, {
 						method: 'DELETE'
 					});
 					const data = await res.json();
@@ -50,7 +50,7 @@ const MySingleReview = (props) => {
 			};
 			const fetchApi = async () => {
 				try {
-					const res = await fetch(`http://localhost:5000/myreviews/${_id}`, {
+					const res = await fetch(`https://server-plumboy-service.vercel.app/myreviews/${_id}`, {
 						method: 'PATCH',
 						headers: {
 							'Content-Type': 'application/json'
@@ -74,7 +74,7 @@ const MySingleReview = (props) => {
 	return (
 		<>
 			{/* My Single Review Container */}
-			<div className='my-single-review-container'>
+			<div className='my-single-review-container' data-aos='zoom-in-up'>
 				<blockquote className='flex h-full flex-col justify-between bg-white p-12 shadow-lg shadow-gray-600'>
 					<div>
 						<div className='flex gap-0.5 text-yellow-300 mb-4'>

@@ -7,7 +7,7 @@ const Services = () => {
 
 	useEffect(() => {
 		const fetchApi = async () => {
-			const res = await fetch('http://localhost:5000/home-services');
+			const res = await fetch('https://server-plumboy-service.vercel.app/home-services');
 			const data = await res.json();
 			// console.log(data);
 			setHomeServices(data);

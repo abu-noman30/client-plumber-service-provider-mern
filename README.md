@@ -6,7 +6,7 @@
 
 ## Description:
 
-1. A web base application (ReactJs).
+1. A web base application (MERN Stack).
 2. At "Home" page user find "My Services" section and from the recently Added services by clicking "VIEW DETAILS" user can see the "Service Details" and other users "Reviews".
 3. User can add their review for the specific Services by submitting Review form.But for that, user have to be Loged in,if the user is new user can register themselves. 
 4. At Home Page under the Services, by clicking "See All" button user find all the available services and user can post their reviews for all services.

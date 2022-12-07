@@ -1,4 +1,4 @@
-# EduCamp (ReactJS)
+# PlumBoy (MERN Stack)
 
 1. Live Website: https://reactjs-plumboy-service-review.web.app/
 2. Server Side: https://server-plumboy-service.vercel.app/

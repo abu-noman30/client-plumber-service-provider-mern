@@ -71,6 +71,7 @@ const AuthContextAPI = ({ children }) => {
 	const authMethods = {
 		currentUser,
 		loading,
+		setLoading,
 		methodCreateUser,
 		methodSignIn,
 		methodSignOut,

@@ -6,7 +6,7 @@ import ClockLoader from 'react-spinners/ClockLoader';
 import { FbaseAuthContext } from '../../Context/AuthContextAPI';
 
 const Login = () => {
-	const { methodSignIn, methodGoogleSignIn, methodSignOut } = useContext(FbaseAuthContext);
+	const { loading, setLoading, methodSignIn, methodGoogleSignIn, methodSignOut } = useContext(FbaseAuthContext);
 	const [error, setError] = useState('');
 	const navigate = useNavigate();
 	const location = useLocation();
@@ -14,7 +14,6 @@ const Login = () => {
 	let from = location.state?.from?.pathname || '/';
 	console.log(from);
 
-	const { loading } = useContext(FbaseAuthContext);
 	// console.log(loading);
 
 	if (loading) {
@@ -44,6 +43,7 @@ const Login = () => {
 				const user = userCredential.user;
 				form.reset();
 				setError('');
+				setLoading(false);
 				console.log(user);
 				// ...
 				const authoriseUser = {
@@ -62,12 +62,14 @@ const Login = () => {
 					}
 				} else {
 					handlerOnLogout();
+					setLoading(false);
 				}
 			})
 
 			.catch((error) => {
 				const errorMessage = error.message;
 				setError(errorMessage);
+				setLoading(false);
 
 				console.error(error);
 				// ..

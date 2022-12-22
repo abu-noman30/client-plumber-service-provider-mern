@@ -9,7 +9,7 @@ const Header = () => {
 					{/* :HERO BACKGROUND */}
 					<div className='absolute w-full h-full bg-black '>
 						<img
-							src='https://img.freepik.com/premium-photo/male-plumber-uniform-changes-faucet-kitchen-handyman-with-toolbag-repair-sink-sanitary-equipment-service-home_266732-4494.jpg?w=826'
+							src='https://i.ibb.co/ydMv0gB/male-plumber-uniform-changes-faucet-kitchen-handyman-with-toolbag-repair-sink-sanitary-equipment-ser.webp'
 							alt=''
 							className='absolute -right-28 w-full h-full object-fill hover:object-scale-down'
 						/>

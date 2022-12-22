@@ -11,7 +11,7 @@ const Root = () => {
 				<Navbar />
 			</div>
 			{/* Outlet/Main Section */}
-			<div className='outlet-section pt-36'>
+			<div className='outlet-section pt-24'>
 				<Outlet />
 			</div>
 			{/* Footer Section */}
